@@ -1,0 +1,188 @@
+{
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "auto_update": true,
+  "format_on_save": "on",
+  "formatter": "auto",
+  "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 120,
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150
+    }
+  },
+
+  // Theme
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark"
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "agent_font_size": 14,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_weight": 300,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_weight": 300,
+  "agent_font_family": "JetBrainsMono Nerd Font",
+  "agent_font_weight": 300,
+  "hide_mouse": "on_typing_and_movement",
+  "file_icons": {
+    "enabled": true,
+    "coloring": "file_type",
+    "background_coloring": "file_type"
+  },
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 5,
+    "coloring": "indent_aware"
+    // "background_coloring": "indent_aware"
+  },
+
+  // Panels
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": "never"
+  },
+  "project_panel": {
+    "auto_fold_dirs": false
+  },
+
+  // Terminal
+  "terminal": {
+    "default_width": 600,
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [".venv"],
+        "activate_script": "default"
+      }
+    }
+  },
+
+  // Assistant
+  "agent": {
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true,
+          "terminal": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
+    "default_profile": "write",
+    "default_height": 220,
+    "default_width": 600,
+    "button": true,
+    "dock": "right",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "version": "2"
+  },
+
+  "features": {
+    "edit_prediction_provider": "copilot",
+    "smart_completion": true
+  },
+  "show_edit_predictions": true,
+
+  // Languages
+  "auto_signature_help": true,
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.fixAll.ruff": true,
+            "source.organizeImports.ruff": true
+          }
+        }
+      ]
+    },
+    "Rust": {
+      "show_edit_predictions": true,
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace"
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    },
+    "jdtls": {
+      "initialization_options": {}
+    },
+    "java": {
+      "settings": {},
+      "initialization_options": {}
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy" // rust-analyzer.check.command (default: "check")
+        }
+      }
+    }
+  },
+
+  // Preferences
+  "preferences": {
+    "includeInlayParameterNameHints": "all",
+    "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+    "includeInlayFunctionParameterTypeHints": true,
+    "includeInlayVariableTypeHints": true,
+    "includeInlayVariableTypeHintsWhenTypeMatchesName": true,
+    "includeInlayPropertyDeclarationTypeHints": true,
+    "includeInlayFunctionLikeReturnTypeHints": true,
+    "includeInlayEnumMemberValueHints": true
+  }
+}
